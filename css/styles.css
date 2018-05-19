@@ -1,0 +1,68 @@
+.blue {
+	background-color: lightblue;
+}
+
+.green {
+	background-color: lightgreen;
+}
+
+.grey {
+	background-color: lightgrey;
+}
+
+.marginFigCap{
+
+	margin: 0 0 3em 0;
+}
+
+.marginSearchField{
+	margin: 0 0 2em 0;
+}
+
+.marginFooter{
+	margin: 3em auto 0 auto;
+}
+
+.bgColorMain{
+	background-color: black!important;
+}
+
+.fontColorMain{
+	color: white;
+}
+
+.paddingCol{
+	padding: 0 1.5em 0 1.5em;
+}
+
+/*
+.modalHeight {
+	height: 15em;
+}
+
+.modal {
+
+  
+
+  min-height: 80em!important;
+
+  
+}
+
+.modal-content {
+
+  height: 100%;
+
+  min-height: 40em!important;
+
+  
+}
+
+.modal-body {
+	height: 30em!important;
+}
+
+.modalContent{
+	height: 30em!important;
+}
+*/

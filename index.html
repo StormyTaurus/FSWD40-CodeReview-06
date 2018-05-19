@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mario's MediaThek</title>
+    <!-- jQuery 3.3.1 -->
+    <script src="libraries/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+    <!-- jQuery UI -->
+    <script src="libraries/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript" charset="utf-8" async defer></script>
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- JS FILE -->
+    <script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+    <!-- STAR RATING PLUGIN -->
+    <link rel="stylesheet" type="text/css" href="libraries/kartik-v-bootstrap-star-rating-19120d9/css/star-rating.css">
+    <script src="libraries/kartik-v-bootstrap-star-rating-19120d9/js/star-rating.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="libraries/kartik-v-bootstrap-star-rating-19120d9/themes/krajee-svg/theme.css">
+    <script src="libraries/kartik-v-bootstrap-star-rating-19120d9/themes/krajee-svg/theme.js" type="text/javascript" charset="utf-8" async defer></script>
+   
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+    <script src="libraries/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+
+<body>
+    <header class="container page-header">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="">Mario's MediaThek</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="row marginSearchField">
+            <div class="col-md-6 col-md-offset-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+        				<button class="btn btn-default" type="button">Go!</button>
+      				</span>
+                </div>
+                <!-- /input-group -->
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+        <div id="mediaThek" class="row">
+        	<div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType1"></span></p>
+                <img id="mediaImage1" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle1" class="mediaTitle"></span>
+
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor1" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating1" class=""></span></p>
+                    <p><span id="mediaGenre1"></span></p>
+                    <p><span id="mediaPublisher1"></span></p>
+                    <p><span id="mediaDescription1"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal1">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal1" role="dialog">
+                            <div class="modal-dialog modal-lg ">
+                                <!-- Modal content-->
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle1" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent1"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType2"></span></p>
+                <img id="mediaImage2" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle2" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor2" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating2"></span></p>
+                    <p><span id="mediaGenre2"></span></p>
+                    <p><span id="mediaPublisher2"></span></p>
+                    <p><span id="mediaDescription2"></span></p>
+
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal2">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal2" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle2" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent2"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType3"></span></p>
+                <img id="mediaImage3" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle3" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor3" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating3"></span></p>
+                    <p><span id="mediaGenre3"></span></p>
+                    <p><span id="mediaPublisher3"></span></p>
+                    <p><span id="mediaDescription3"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal3">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal3" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle3" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent3"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType4"></span></p>
+                <img id="mediaImage4" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle4" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor4" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating4"></span></p>
+                    <p><span id="mediaGenre4"></span></p>
+                    <p><span id="mediaPublisher4"></span></p>
+                    <p><span id="mediaDescription4"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal4">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal4" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle4" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent4"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType5"></span></p>
+                <img id="mediaImage5" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle5" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor5" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating5"></span></p>
+                    <p><span id="mediaGenre5"></span></p>
+                    <p><span id="mediaPublisher5"></span></p>
+                    <p><span id="mediaDescription5"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal5">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal5" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle5" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent5"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType6"></span></p>
+                <img id="mediaImage6" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle6" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor6" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating6"></span></p>
+                    <p><span id="mediaGenre6"></span></p>
+                    <p><span id="mediaPublisher6"></span></p>
+                    <p><span id="mediaDescription6"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal6">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal6" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle6" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent6"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType7"></span></p>
+                <img id="mediaImage7" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle7" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor7" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating7"></span></p>
+                    <p><span id="mediaGenre7"></span></p>
+                    <p><span id="mediaPublisher7"></span></p>
+                    <p><span id="mediaDescription7"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal7">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal7" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle7" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent7"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+            <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType8"></span></p>
+                <img id="mediaImage8" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle8" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor8" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating8"></span></p>
+                    <p><span id="mediaGenre8"></span></p>
+                    <p><span id="mediaPublisher8"></span></p>
+                    <p><span id="mediaDescription8"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal8">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal8" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle8" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent8"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType9"></span></p>
+                <img id="mediaImage9" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle9" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor9" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating9"></span></p>
+                    <p><span id="mediaGenre9"></span></p>
+                    <p><span id="mediaPublisher9"></span></p>
+                    <p><span id="mediaDescription9"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal9">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal9" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle9" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent9"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType10"></span></p>
+                <img id="mediaImage10" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle10" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor10" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating10"></span></p>
+                    <p><span id="mediaGenre10"></span></p>
+                    <p><span id="mediaPublisher10"></span></p>
+                    <p><span id="mediaDescription10"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal10">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal10" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle10" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent10"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType11"></span></p>
+                <img id="mediaImage11" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle11" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor11" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating11"></span></p>
+                    <p><span id="mediaGenre11"></span></p>
+                    <p><span id="mediaPublisher11"></span></p>
+                    <p><span id="mediaDescription11"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal11">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal11" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle11" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent11"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3 col-sm-6 paddingCol">
+            <figure class="well">
+                <p><span id="mediaType12"></span></p>
+                <img id="mediaImage12" class="img-responsive img-rounded" src="" alt="">
+                <figcaption class="container marginFigCap">
+                    <h4>
+						<span id="mediaTitle12" class="mediaTitle"></span>
+					</h4> by
+                    <h5>
+						<span id="mediaAuthor12" class="mediaAuthor"></span>
+					</h5>
+                    <p><span id="mediaRating12"></span></p>
+                    <p><span id="mediaGenre12"></span></p>
+                    <p><span id="mediaPublisher12"></span></p>
+                    <p><span id="mediaDescription12"></span></p>
+                    <div class="container">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal12">Description</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal12" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 id="modalTitle12" class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="modalContent12"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        </div>
+        <div class="row">
+            <h1 class="text-center">Add New Media</h1>
+            <div class="col-md-6 col-md-offset-3">
+                <form action="" method="" accept-charset="utf-8">
+                    <label>Title</label>
+                    <input class="form-control" type="" name="title" value="">
+                    <label>Type</label>
+                    <fieldset class="">
+                        <input type="radio" id="dvd" class="" name="mediaType" value="DVD">
+                        <label class="" for="dvd"> DVD</label>
+                        <br>
+                        <input type="radio" id="cd" name="mediaType" value="CD">
+                        <label for="cd"> CD</label>
+                        <br>
+                        <input type="radio" id="book" name="mediaType" value="Book">
+                        <label for="book"> Book</label>
+                        <br>
+                    </fieldset>
+                    <label>Author</label>
+                    <input class="form-control" type="" name="title" value="">
+                    <label>Genre</label>
+                    <input class="form-control" type="" name="title" value="">
+                    <label>Publisher</label>
+                    <input class="form-control" type="" name="title" value="">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="5" placeholder="Description" required></textarea>
+                    <br>
+                    
+                    <button class="btn btn-info btn-lg" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="container text-center marginFooter">
+        <h5>I do not own any copyright to the media material used on this page - It's created for educational purpose only ! </h5>
+    </footer>
+</body>
+
+</html>
